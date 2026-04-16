@@ -5,6 +5,7 @@ const navLinks = [
   { label: 'Services', href: '#services' },
   { label: 'Clients', href: '#clients' },
   { label: 'Why Us', href: '#why-us' },
+  { label: 'Blog', href: '#blog' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -28,8 +29,8 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-[#04091a]/95 backdrop-blur-xl border-b border-white/5 shadow-2xl'
-          : 'bg-transparent'
+          ? 'bg-white/95 backdrop-blur-xl border-b border-[#0f1c3f]/8 shadow-md'
+          : 'bg-white/80 backdrop-blur-sm border-b border-[#0f1c3f]/5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -43,10 +44,10 @@ export default function Navbar() {
             <div className="w-10 h-10 rounded-sm flex items-center justify-center"
               style={{ background: 'linear-gradient(135deg, #d4a520 0%, #f0c96a 100%)' }}
             >
-              <span className="text-[#04091a] font-black text-lg leading-none">L</span>
+              <span className="text-white font-black text-lg leading-none">L</span>
             </div>
             <div>
-              <div className="text-white font-bold text-lg leading-tight tracking-tight">
+              <div className="text-[#0f1c3f] font-bold text-lg leading-tight tracking-tight">
                 Labiquip
               </div>
               <div className="text-[10px] text-[#d4a520] font-semibold tracking-[0.15em] uppercase leading-none">
@@ -62,7 +63,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="nav-link text-sm font-medium text-white/70 hover:text-white"
+                className="nav-link text-sm font-medium text-[#0f1c3f]/70 hover:text-[#0f1c3f]"
               >
                 {link.label}
               </a>
@@ -86,22 +87,22 @@ export default function Navbar() {
             className="md:hidden flex flex-col gap-1.5 p-2"
             aria-label="Toggle menu"
           >
-            <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-            <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-            <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+            <span className={`block w-6 h-0.5 bg-[#0f1c3f] transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+            <span className={`block w-6 h-0.5 bg-[#0f1c3f] transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+            <span className={`block w-6 h-0.5 bg-[#0f1c3f] transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      <div className={`md:hidden transition-all duration-300 overflow-hidden ${menuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'}`}>
-        <div className="bg-[#04091a]/98 backdrop-blur-xl border-t border-white/5 px-6 py-6 flex flex-col gap-5">
+      <div className={`md:hidden transition-all duration-300 overflow-hidden ${menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+        <div className="bg-white border-t border-[#0f1c3f]/8 px-6 py-6 flex flex-col gap-5">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
-              className="text-white/80 hover:text-white font-medium text-base"
+              className="text-[#0f1c3f]/80 hover:text-[#0f1c3f] font-medium text-base"
             >
               {link.label}
             </a>

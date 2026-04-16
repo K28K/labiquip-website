@@ -38,11 +38,11 @@ export default function About() {
   return (
     <section id="about" ref={sectionRef} className="relative py-28 overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-[#070e24] grid-pattern" />
+      <div className="absolute inset-0 bg-[#f0ede6] grid-pattern" />
 
       {/* Decorative gold circle */}
       <div
-        className="absolute -right-32 top-1/2 -translate-y-1/2 w-96 h-96 rounded-full opacity-5"
+        className="absolute -right-32 top-1/2 -translate-y-1/2 w-96 h-96 rounded-full opacity-10"
         style={{ background: 'radial-gradient(circle, #d4a520, transparent 70%)' }}
       />
 
@@ -53,7 +53,7 @@ export default function About() {
             <div className="section-line" />
             <span className="text-[#d4a520] text-xs font-bold tracking-[0.3em] uppercase">Who We Are</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-black text-white leading-tight max-w-xl">
+          <h2 className="text-4xl md:text-5xl font-black text-[#0f1c3f] leading-tight max-w-xl">
             Built on Trust,<br />
             <span className="gold-text">Driven by Excellence.</span>
           </h2>
@@ -62,11 +62,11 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: Text */}
           <div className={`transition-all duration-700 delay-200 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
-            <p className="text-white/60 text-base leading-relaxed mb-6">
-              Founded in 2020 and headquartered in <strong className="text-white/90">New Delhi</strong>, Labiquip Solutions Pvt. Ltd. has rapidly grown into a trusted partner for India's most demanding projects. We combine modern equipment, a skilled workforce, and deep operational expertise to deliver results that matter.
+            <p className="text-[#0f1c3f]/65 text-base leading-relaxed mb-6">
+              Founded in 2020 and headquartered in <strong className="text-[#0f1c3f]">New Delhi</strong>, Labiquip Solutions Pvt. Ltd. has rapidly grown into a trusted partner for India's most demanding projects. We combine modern heavy earth moving equipment, skilled personnel, and deep operational expertise to deliver results that matter.
             </p>
-            <p className="text-white/60 text-base leading-relaxed mb-10">
-              We proudly serve institutions including the <strong className="text-white/90">Indian Army, Indian Navy, Indian Railways,</strong> and <strong className="text-white/90">Rashtrapati Bhavan</strong> — a testament to the confidence and trust our clients place in us every day.
+            <p className="text-[#0f1c3f]/65 text-base leading-relaxed mb-10">
+              We proudly serve institutions including the <strong className="text-[#0f1c3f]">Indian Army, Indian Navy, Indian Railways,</strong> and <strong className="text-[#0f1c3f]">Rashtrapati Bhavan</strong> — a testament to the confidence and trust our clients place in us every day.
             </p>
 
             {/* Key facts */}
@@ -74,12 +74,12 @@ export default function About() {
               {[
                 { label: 'Founded', value: '2020' },
                 { label: 'Headquarters', value: 'New Delhi' },
-                { label: 'Team Size', value: '4–5 Core + Field' },
-                { label: 'Delivery', value: 'Pan India' },
+                { label: 'Service Area', value: 'Pan India' },
+                { label: 'Delivery', value: 'On Time, Every Time' },
               ].map((item) => (
                 <div key={item.label} className="glass-card rounded p-4">
                   <div className="text-[10px] text-[#d4a520] font-bold tracking-[0.2em] uppercase mb-1">{item.label}</div>
-                  <div className="text-white font-semibold text-sm">{item.value}</div>
+                  <div className="text-[#0f1c3f] font-semibold text-sm">{item.value}</div>
                 </div>
               ))}
             </div>
@@ -95,8 +95,8 @@ export default function About() {
               >
                 <div className="text-2xl flex-shrink-0 mt-0.5">{p.icon}</div>
                 <div>
-                  <h3 className="text-white font-bold text-base mb-2">{p.title}</h3>
-                  <p className="text-white/55 text-sm leading-relaxed">{p.text}</p>
+                  <h3 className="text-[#0f1c3f] font-bold text-base mb-2">{p.title}</h3>
+                  <p className="text-[#0f1c3f]/55 text-sm leading-relaxed">{p.text}</p>
                 </div>
               </div>
             ))}

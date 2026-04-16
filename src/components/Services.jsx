@@ -21,10 +21,10 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
       </svg>
     ),
-    title: 'Heavy Equipment',
+    title: 'Heavy Earth Moving Equipment',
     subtitle: 'Excavators, Bulldozers & JCBs',
     description:
-      'Modern, well-maintained heavy machinery for construction, earthmoving, and infrastructure projects. Operated by certified professionals.',
+      'Modern, well-maintained heavy earth moving machinery for construction, earthmoving, and infrastructure projects. Operated by certified professionals.',
     features: ['Excavators & JCBs', 'Bulldozers', 'Operator Included', 'On-site Support'],
   },
   {
@@ -74,11 +74,11 @@ export default function Services() {
 
   return (
     <section id="services" ref={sectionRef} className="relative py-28 overflow-hidden">
-      <div className="absolute inset-0 bg-[#04091a]" />
+      <div className="absolute inset-0 bg-[#f8f7f4] grid-pattern" />
 
       {/* Decorative */}
       <div
-        className="absolute left-0 top-0 w-px h-full opacity-20"
+        className="absolute left-0 top-0 w-px h-full opacity-30"
         style={{ background: 'linear-gradient(to bottom, transparent, #d4a520 30%, #d4a520 70%, transparent)' }}
       />
 
@@ -90,11 +90,11 @@ export default function Services() {
             <span className="text-[#d4a520] text-xs font-bold tracking-[0.3em] uppercase">What We Do</span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-            <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
+            <h2 className="text-4xl md:text-5xl font-black text-[#0f1c3f] leading-tight">
               Our Core<br />
               <span className="gold-text">Services.</span>
             </h2>
-            <p className="text-white/50 text-sm max-w-sm leading-relaxed">
+            <p className="text-[#0f1c3f]/50 text-sm max-w-sm leading-relaxed">
               Comprehensive solutions tailored for India's most demanding projects and prestigious institutions.
             </p>
           </div>
@@ -109,7 +109,7 @@ export default function Services() {
               style={{ transitionDelay: `${i * 120}ms` }}
             >
               {/* Number watermark */}
-              <div className="absolute -top-4 -right-2 text-[80px] font-black text-white/[0.03] select-none leading-none">
+              <div className="absolute -top-4 -right-2 text-[80px] font-black text-[#0f1c3f]/[0.03] select-none leading-none">
                 {service.number}
               </div>
 
@@ -118,7 +118,7 @@ export default function Services() {
 
               {/* Icon */}
               <div className="inline-flex items-center justify-center w-14 h-14 rounded-sm mb-6"
-                style={{ background: 'rgba(212, 165, 32, 0.1)', color: '#d4a520' }}
+                style={{ background: 'rgba(212, 165, 32, 0.12)', color: '#d4a520' }}
               >
                 {service.icon}
               </div>
@@ -127,8 +127,8 @@ export default function Services() {
               <div className="text-[10px] text-[#d4a520] font-bold tracking-[0.2em] uppercase mb-2">
                 {service.subtitle}
               </div>
-              <h3 className="text-white font-bold text-xl mb-3">{service.title}</h3>
-              <p className="text-white/55 text-sm leading-relaxed mb-6">{service.description}</p>
+              <h3 className="text-[#0f1c3f] font-bold text-xl mb-3">{service.title}</h3>
+              <p className="text-[#0f1c3f]/55 text-sm leading-relaxed mb-6">{service.description}</p>
 
               {/* Feature Tags */}
               <div className="flex flex-wrap gap-2">
@@ -138,8 +138,8 @@ export default function Services() {
                     className="text-xs px-3 py-1 rounded-sm font-medium"
                     style={{
                       background: 'rgba(212, 165, 32, 0.08)',
-                      color: 'rgba(230, 184, 74, 0.9)',
-                      border: '1px solid rgba(212, 165, 32, 0.15)',
+                      color: '#b8860b',
+                      border: '1px solid rgba(212, 165, 32, 0.2)',
                     }}
                   >
                     {f}

@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 const stats = [
   { value: 4, suffix: '+', label: 'Years Active' },
   { value: 50, suffix: '+', label: 'Projects Delivered' },
-  { value: 4, suffix: '', label: 'Govt. Clients' },
+  { value: 10, suffix: '+', label: 'Government Clients' },
 ];
 
 function useCountUp(target, duration = 1800, start = false) {
@@ -25,11 +25,11 @@ function useCountUp(target, duration = 1800, start = false) {
 function StatItem({ value, suffix, label, startCount }) {
   const count = useCountUp(value, 1600, startCount);
   return (
-    <div className="text-center px-6 border-r border-white/10 last:border-0">
+    <div className="text-center px-6 border-r border-white/20 last:border-0">
       <div className="text-3xl lg:text-4xl font-black gold-text counter-number">
         {count}{suffix}
       </div>
-      <div className="text-xs text-white/50 font-medium tracking-wider uppercase mt-1">{label}</div>
+      <div className="text-xs text-white/70 font-medium tracking-wider uppercase mt-1">{label}</div>
     </div>
   );
 }
@@ -57,16 +57,16 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src="/hero-equipment.jpg"
-          alt="Heavy Equipment"
+          alt="Heavy Earth Moving Equipment"
           className="w-full h-full object-cover"
         />
-        {/* Multi-layer overlay for premium dark look */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#04091a]/95 via-[#04091a]/85 to-[#04091a]/60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#04091a] via-transparent to-[#04091a]/50" />
+        {/* Lighter overlay for a less dark look */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0f1c3f]/90 via-[#0f1c3f]/75 to-[#0f1c3f]/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0f1c3f]/80 via-transparent to-[#0f1c3f]/30" />
       </div>
 
       {/* Grid Pattern */}
-      <div className="absolute inset-0 z-0 grid-pattern opacity-40" />
+      <div className="absolute inset-0 z-0 grid-pattern opacity-30" />
 
       {/* Gold accent line on left */}
       <div
@@ -82,7 +82,7 @@ export default function Hero() {
             className={`inline-flex items-center gap-3 mb-8 transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
           >
             <div className="w-8 h-px bg-[#d4a520]" />
-            <span className="text-[#d4a520] text-xs font-bold tracking-[0.3em] uppercase">
+            <span className="text-[#f0c96a] text-xs font-bold tracking-[0.3em] uppercase">
               Trusted by India's Finest Institutions
             </span>
           </div>
@@ -100,9 +100,9 @@ export default function Hero() {
 
           {/* Subtext */}
           <p
-            className={`text-base lg:text-lg text-white/60 leading-relaxed max-w-xl mb-10 transition-all duration-700 delay-200 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            className={`text-base lg:text-lg text-white/75 leading-relaxed max-w-xl mb-10 transition-all duration-700 delay-200 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
-            End-to-end manpower, heavy equipment, horticulture, and facility
+            End-to-end manpower, heavy earth moving equipment, horticulture, and facility
             management services — powering India's most demanding projects since 2020.
           </p>
 

@@ -17,7 +17,7 @@ const reasons = [
       </svg>
     ),
     title: 'Rapid Deployment',
-    description: 'Agile operations mean we can mobilize manpower and equipment quickly — minimizing project downtime for our clients.',
+    description: 'Agile operations mean we can mobilize manpower and heavy earth moving equipment quickly — minimizing project downtime for our clients.',
   },
   {
     icon: (
@@ -26,7 +26,7 @@ const reasons = [
       </svg>
     ),
     title: 'Modern Equipment',
-    description: 'Well-maintained, up-to-date heavy machinery operated by certified professionals — ensuring safety and efficiency on every site.',
+    description: 'Well-maintained, up-to-date heavy earth moving machinery operated by certified professionals — ensuring safety and efficiency on every site.',
   },
   {
     icon: (
@@ -76,11 +76,11 @@ export default function WhyUs() {
 
   return (
     <section id="why-us" ref={sectionRef} className="relative py-28 overflow-hidden">
-      <div className="absolute inset-0 bg-[#04091a]" />
+      <div className="absolute inset-0 bg-[#f8f7f4] grid-pattern" />
 
       {/* Decorative */}
       <div
-        className="absolute right-0 bottom-0 w-96 h-96 opacity-5"
+        className="absolute right-0 bottom-0 w-96 h-96 opacity-10"
         style={{ background: 'radial-gradient(circle at bottom right, #d4a520, transparent 70%)' }}
       />
 
@@ -92,11 +92,11 @@ export default function WhyUs() {
             <span className="text-[#d4a520] text-xs font-bold tracking-[0.3em] uppercase">Why Choose Us</span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-            <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
+            <h2 className="text-4xl md:text-5xl font-black text-[#0f1c3f] leading-tight">
               The Labiquip<br />
               <span className="gold-text">Advantage.</span>
             </h2>
-            <p className="text-white/50 text-sm max-w-xs leading-relaxed">
+            <p className="text-[#0f1c3f]/50 text-sm max-w-xs leading-relaxed">
               What sets us apart when it comes to delivering for India's most critical institutions.
             </p>
           </div>
@@ -117,12 +117,12 @@ export default function WhyUs() {
 
               <div
                 className="inline-flex items-center justify-center w-12 h-12 rounded-sm mb-5"
-                style={{ background: 'rgba(212, 165, 32, 0.1)', color: '#d4a520' }}
+                style={{ background: 'rgba(212, 165, 32, 0.12)', color: '#d4a520' }}
               >
                 {reason.icon}
               </div>
-              <h3 className="text-white font-bold text-base mb-2">{reason.title}</h3>
-              <p className="text-white/50 text-sm leading-relaxed">{reason.description}</p>
+              <h3 className="text-[#0f1c3f] font-bold text-base mb-2">{reason.title}</h3>
+              <p className="text-[#0f1c3f]/55 text-sm leading-relaxed">{reason.description}</p>
             </div>
           ))}
         </div>

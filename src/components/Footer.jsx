@@ -4,7 +4,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-[#04091a] border-t border-white/5">
+    <footer className="relative bg-[#0f1c3f] border-t border-white/5">
       {/* Top gold line */}
       <div className="h-px w-full" style={{ background: 'linear-gradient(to right, transparent, #d4a520, transparent)' }} />
 
@@ -17,15 +17,15 @@ export default function Footer() {
                 className="w-10 h-10 rounded-sm flex items-center justify-center"
                 style={{ background: 'linear-gradient(135deg, #d4a520 0%, #f0c96a 100%)' }}
               >
-                <span className="text-[#04091a] font-black text-lg">L</span>
+                <span className="text-white font-black text-lg">L</span>
               </div>
               <div>
                 <div className="text-white font-bold text-lg leading-tight">Labiquip</div>
                 <div className="text-[10px] text-[#d4a520] font-semibold tracking-[0.15em] uppercase">Solutions Pvt. Ltd.</div>
               </div>
             </div>
-            <p className="text-white/40 text-sm leading-relaxed max-w-xs">
-              Delivering excellence in manpower, heavy equipment, horticulture, and facility management since 2020.
+            <p className="text-white/45 text-sm leading-relaxed max-w-xs">
+              Delivering excellence in manpower, heavy earth moving equipment, horticulture, and facility management since 2020.
             </p>
           </div>
 
@@ -38,6 +38,7 @@ export default function Footer() {
                 { label: 'Our Services', href: '#services' },
                 { label: 'Our Clients', href: '#clients' },
                 { label: 'Why Choose Us', href: '#why-us' },
+                { label: 'Blog', href: '#blog' },
                 { label: 'Contact Us', href: '#contact' },
               ].map((link) => (
                 <a
@@ -58,7 +59,7 @@ export default function Footer() {
             <div className="flex flex-col gap-3">
               {[
                 'Manpower Solutions',
-                'Heavy Equipment',
+                'Heavy Earth Moving Equipment',
                 'Horticulture Services',
                 'Facility Management',
               ].map((s) => (

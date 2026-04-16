@@ -15,7 +15,7 @@ function useInView(ref, threshold = 0.1) {
 
 const services = [
   'Manpower Solutions',
-  'Heavy Equipment',
+  'Heavy Earth Moving Equipment',
   'Horticulture Services',
   'Facility Management',
   'Multiple Services',
@@ -95,9 +95,9 @@ export default function Contact() {
 
   return (
     <section id="contact" ref={sectionRef} className="relative py-28 overflow-hidden">
-      <div className="absolute inset-0 bg-[#070e24] grid-pattern" />
+      <div className="absolute inset-0 bg-[#f0ede6] grid-pattern" />
       <div
-        className="absolute left-1/2 -translate-x-1/2 bottom-0 w-[600px] h-[200px] opacity-8"
+        className="absolute left-1/2 -translate-x-1/2 bottom-0 w-[600px] h-[200px] opacity-10"
         style={{ background: 'radial-gradient(ellipse at center bottom, #d4a520, transparent 70%)' }}
       />
 
@@ -109,11 +109,11 @@ export default function Contact() {
             <span className="text-[#d4a520] text-xs font-bold tracking-[0.3em] uppercase">Get in Touch</span>
             <div className="section-line" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-black text-white leading-tight mb-4">
+          <h2 className="text-4xl md:text-5xl font-black text-[#0f1c3f] leading-tight mb-4">
             Ready to Build<br />
             <span className="gold-text">Something Great?</span>
           </h2>
-          <p className="text-white/50 text-sm max-w-md mx-auto leading-relaxed">
+          <p className="text-[#0f1c3f]/50 text-sm max-w-md mx-auto leading-relaxed">
             Have a project in mind? Reach out for a free consultation and discover how Labiquip can support your needs.
           </p>
         </div>
@@ -123,8 +123,8 @@ export default function Contact() {
           <div className={`lg:col-span-2 flex flex-col gap-6 transition-all duration-700 delay-200 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
             <div className="glass-card rounded-sm p-8 flex flex-col gap-6 h-full">
               <div>
-                <h3 className="text-white font-bold text-lg mb-1">Contact Information</h3>
-                <p className="text-white/40 text-sm">We're available to take on new projects and partnerships.</p>
+                <h3 className="text-[#0f1c3f] font-bold text-lg mb-1">Contact Information</h3>
+                <p className="text-[#0f1c3f]/45 text-sm">We're available to take on new projects and partnerships.</p>
               </div>
 
               <div className="flex flex-col gap-5">
@@ -132,23 +132,23 @@ export default function Contact() {
                   <div key={item.label} className="flex items-start gap-4">
                     <div
                       className="w-10 h-10 rounded-sm flex items-center justify-center flex-shrink-0"
-                      style={{ background: 'rgba(212, 165, 32, 0.1)', color: '#d4a520' }}
+                      style={{ background: 'rgba(212, 165, 32, 0.12)', color: '#d4a520' }}
                     >
                       {item.icon}
                     </div>
                     <div>
-                      <div className="text-[10px] text-white/40 font-bold tracking-[0.15em] uppercase mb-0.5">{item.label}</div>
+                      <div className="text-[10px] text-[#0f1c3f]/40 font-bold tracking-[0.15em] uppercase mb-0.5">{item.label}</div>
                       {item.href ? (
                         <a
                           href={item.href}
                           target={item.href.startsWith('http') ? '_blank' : undefined}
                           rel="noopener noreferrer"
-                          className="text-white/80 text-sm hover:text-[#d4a520] transition-colors duration-200"
+                          className="text-[#0f1c3f]/80 text-sm hover:text-[#d4a520] transition-colors duration-200"
                         >
                           {item.value}
                         </a>
                       ) : (
-                        <span className="text-white/80 text-sm">{item.value}</span>
+                        <span className="text-[#0f1c3f]/80 text-sm">{item.value}</span>
                       )}
                     </div>
                   </div>
@@ -156,8 +156,8 @@ export default function Contact() {
               </div>
 
               {/* Divider */}
-              <div className="border-t border-white/5 pt-6">
-                <p className="text-white/30 text-xs leading-relaxed">
+              <div className="border-t border-[#0f1c3f]/8 pt-6">
+                <p className="text-[#0f1c3f]/35 text-xs leading-relaxed">
                   Labiquip Solutions Pvt. Ltd. · CIN: U74999DL2020PTC372…<br />
                   Registered in New Delhi, India
                 </p>
@@ -172,15 +172,15 @@ export default function Contact() {
                 <div className="flex flex-col items-center justify-center text-center py-12 gap-6">
                   <div
                     className="w-20 h-20 rounded-full flex items-center justify-center"
-                    style={{ background: 'rgba(212, 165, 32, 0.15)', border: '2px solid rgba(212,165,32,0.3)' }}
+                    style={{ background: 'rgba(212, 165, 32, 0.12)', border: '2px solid rgba(212,165,32,0.3)' }}
                   >
                     <svg viewBox="0 0 24 24" fill="none" stroke="#d4a520" strokeWidth="2" className="w-10 h-10">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-white font-bold text-xl mb-2">Thank You!</h3>
-                    <p className="text-white/50 text-sm">Your message has been received. We'll get back to you within 24 hours.</p>
+                    <h3 className="text-[#0f1c3f] font-bold text-xl mb-2">Thank You!</h3>
+                    <p className="text-[#0f1c3f]/50 text-sm">Your message has been received. We'll get back to you within 24 hours.</p>
                   </div>
                   <button
                     onClick={() => { setSubmitted(false); setForm({ name: '', email: '', service: '', message: '' }); }}
@@ -204,10 +204,10 @@ export default function Contact() {
                         onChange={handleChange}
                         required
                         placeholder="Your name"
-                        className="w-full px-4 py-3 rounded-sm text-sm text-white placeholder-white/25 outline-none focus:border-[#d4a520] transition-colors duration-200"
+                        className="w-full px-4 py-3 rounded-sm text-sm text-[#0f1c3f] placeholder-[#0f1c3f]/30 outline-none focus:border-[#d4a520] transition-colors duration-200"
                         style={{
-                          background: 'rgba(255,255,255,0.04)',
-                          border: '1px solid rgba(255,255,255,0.1)',
+                          background: '#f8f7f4',
+                          border: '1px solid rgba(15,28,63,0.12)',
                         }}
                       />
                     </div>
@@ -222,10 +222,10 @@ export default function Contact() {
                         onChange={handleChange}
                         required
                         placeholder="you@example.com"
-                        className="w-full px-4 py-3 rounded-sm text-sm text-white placeholder-white/25 outline-none focus:border-[#d4a520] transition-colors duration-200"
+                        className="w-full px-4 py-3 rounded-sm text-sm text-[#0f1c3f] placeholder-[#0f1c3f]/30 outline-none focus:border-[#d4a520] transition-colors duration-200"
                         style={{
-                          background: 'rgba(255,255,255,0.04)',
-                          border: '1px solid rgba(255,255,255,0.1)',
+                          background: '#f8f7f4',
+                          border: '1px solid rgba(15,28,63,0.12)',
                         }}
                       />
                     </div>
@@ -238,15 +238,15 @@ export default function Contact() {
                       name="service"
                       value={form.service}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-sm text-sm text-white outline-none focus:border-[#d4a520] transition-colors duration-200 appearance-none"
+                      className="w-full px-4 py-3 rounded-sm text-sm text-[#0f1c3f] outline-none focus:border-[#d4a520] transition-colors duration-200 appearance-none"
                       style={{
-                        background: 'rgba(255,255,255,0.04)',
-                        border: '1px solid rgba(255,255,255,0.1)',
+                        background: '#f8f7f4',
+                        border: '1px solid rgba(15,28,63,0.12)',
                       }}
                     >
-                      <option value="" style={{ background: '#0a1528' }}>Select a service</option>
+                      <option value="">Select a service</option>
                       {services.map((s) => (
-                        <option key={s} value={s} style={{ background: '#0a1528' }}>{s}</option>
+                        <option key={s} value={s}>{s}</option>
                       ))}
                     </select>
                   </div>
@@ -261,10 +261,10 @@ export default function Contact() {
                       required
                       rows={5}
                       placeholder="Tell us about your requirements..."
-                      className="w-full px-4 py-3 rounded-sm text-sm text-white placeholder-white/25 outline-none focus:border-[#d4a520] transition-colors duration-200 resize-none"
+                      className="w-full px-4 py-3 rounded-sm text-sm text-[#0f1c3f] placeholder-[#0f1c3f]/30 outline-none focus:border-[#d4a520] transition-colors duration-200 resize-none"
                       style={{
-                        background: 'rgba(255,255,255,0.04)',
-                        border: '1px solid rgba(255,255,255,0.1)',
+                        background: '#f8f7f4',
+                        border: '1px solid rgba(15,28,63,0.12)',
                       }}
                     />
                   </div>
