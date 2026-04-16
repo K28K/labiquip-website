@@ -77,14 +77,20 @@ export default function Contact() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
-    // Simulate a short delay then show thank-you
-    setTimeout(() => {
-      setSubmitting(false);
+    const formData = new FormData();
+    formData.append('form-name', 'contact');
+    Object.entries(form).forEach(([key, value]) => formData.append(key, value));
+    try {
+      await fetch('/', { method: 'POST', body: formData });
       setSubmitted(true);
-    }, 1200);
+    } catch (err) {
+      console.error('Form submission error:', err);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -184,7 +190,9 @@ export default function Contact() {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                <form name="contact" onSubmit={handleSubmit} data-netlify="true" data-netlify-honeypot="bot-field" className="flex flex-col gap-5">
+                  <input type="hidden" name="form-name" value="contact" />
+                  <input type="hidden" name="bot-field" />
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {/* Name */}
                     <div className="flex flex-col gap-2">
